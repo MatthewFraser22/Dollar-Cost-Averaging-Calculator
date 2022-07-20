@@ -13,9 +13,13 @@
 		99D697BC2888B0B500B25EEE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99D697BA2888B0B500B25EEE /* Main.storyboard */; };
 		99D697BE2888B0B700B25EEE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99D697BD2888B0B700B25EEE /* Assets.xcassets */; };
 		99D697C12888B0B700B25EEE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99D697BF2888B0B700B25EEE /* LaunchScreen.storyboard */; };
+		99D697C92888B43600B25EEE /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 99D697C82888B43600B25EEE /* Podfile */; };
+		D51B3CEB85297B059632AC61 /* Pods_ios_DollarCostAveragingCalculator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBACE5308C8EF2671AC744F5 /* Pods_ios_DollarCostAveragingCalculator.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		202787021FE6ED8CC9DED49C /* Pods-ios-DollarCostAveragingCalculator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-DollarCostAveragingCalculator.release.xcconfig"; path = "Target Support Files/Pods-ios-DollarCostAveragingCalculator/Pods-ios-DollarCostAveragingCalculator.release.xcconfig"; sourceTree = "<group>"; };
+		6D417E0A9C149B71A4620419 /* Pods-ios-DollarCostAveragingCalculator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-DollarCostAveragingCalculator.debug.xcconfig"; path = "Target Support Files/Pods-ios-DollarCostAveragingCalculator/Pods-ios-DollarCostAveragingCalculator.debug.xcconfig"; sourceTree = "<group>"; };
 		99D697B12888B0B500B25EEE /* ios-DollarCostAveragingCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-DollarCostAveragingCalculator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		99D697B42888B0B500B25EEE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		99D697B62888B0B500B25EEE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +28,8 @@
 		99D697BD2888B0B700B25EEE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		99D697C02888B0B700B25EEE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		99D697C22888B0B700B25EEE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		99D697C82888B43600B25EEE /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		EBACE5308C8EF2671AC744F5 /* Pods_ios_DollarCostAveragingCalculator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ios_DollarCostAveragingCalculator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +37,39 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D51B3CEB85297B059632AC61 /* Pods_ios_DollarCostAveragingCalculator.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6A1F6B7CEB00B89C69963DB6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EBACE5308C8EF2671AC744F5 /* Pods_ios_DollarCostAveragingCalculator.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		76FA729CC96FDED8FBBD9CB7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6D417E0A9C149B71A4620419 /* Pods-ios-DollarCostAveragingCalculator.debug.xcconfig */,
+				202787021FE6ED8CC9DED49C /* Pods-ios-DollarCostAveragingCalculator.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		99D697A82888B0B500B25EEE = {
 			isa = PBXGroup;
 			children = (
+				99D697C82888B43600B25EEE /* Podfile */,
 				99D697B32888B0B500B25EEE /* ios-DollarCostAveragingCalculator */,
 				99D697B22888B0B500B25EEE /* Products */,
+				76FA729CC96FDED8FBBD9CB7 /* Pods */,
+				6A1F6B7CEB00B89C69963DB6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,9 +102,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 99D697C52888B0B700B25EEE /* Build configuration list for PBXNativeTarget "ios-DollarCostAveragingCalculator" */;
 			buildPhases = (
+				890222ED6C44BF26D7E90DCC /* [CP] Check Pods Manifest.lock */,
 				99D697AD2888B0B500B25EEE /* Sources */,
 				99D697AE2888B0B500B25EEE /* Frameworks */,
 				99D697AF2888B0B500B25EEE /* Resources */,
+				576E12F0DBDD392257BF5BD9 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -127,11 +157,54 @@
 			files = (
 				99D697C12888B0B700B25EEE /* LaunchScreen.storyboard in Resources */,
 				99D697BE2888B0B700B25EEE /* Assets.xcassets in Resources */,
+				99D697C92888B43600B25EEE /* Podfile in Resources */,
 				99D697BC2888B0B500B25EEE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		576E12F0DBDD392257BF5BD9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ios-DollarCostAveragingCalculator/Pods-ios-DollarCostAveragingCalculator-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ios-DollarCostAveragingCalculator/Pods-ios-DollarCostAveragingCalculator-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ios-DollarCostAveragingCalculator/Pods-ios-DollarCostAveragingCalculator-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		890222ED6C44BF26D7E90DCC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ios-DollarCostAveragingCalculator-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		99D697AD2888B0B500B25EEE /* Sources */ = {
@@ -282,6 +355,7 @@
 		};
 		99D697C62888B0B700B25EEE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6D417E0A9C149B71A4620419 /* Pods-ios-DollarCostAveragingCalculator.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -310,6 +384,7 @@
 		};
 		99D697C72888B0B700B25EEE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 202787021FE6ED8CC9DED49C /* Pods-ios-DollarCostAveragingCalculator.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
