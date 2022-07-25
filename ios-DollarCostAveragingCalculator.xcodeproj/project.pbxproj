@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		99D697B52888B0B500B25EEE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D697B42888B0B500B25EEE /* AppDelegate.swift */; };
 		99D697B72888B0B500B25EEE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D697B62888B0B500B25EEE /* SceneDelegate.swift */; };
-		99D697B92888B0B500B25EEE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D697B82888B0B500B25EEE /* ViewController.swift */; };
+		99D697B92888B0B500B25EEE /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D697B82888B0B500B25EEE /* SearchTableViewController.swift */; };
 		99D697BC2888B0B500B25EEE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99D697BA2888B0B500B25EEE /* Main.storyboard */; };
 		99D697BE2888B0B700B25EEE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99D697BD2888B0B700B25EEE /* Assets.xcassets */; };
 		99D697C12888B0B700B25EEE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99D697BF2888B0B700B25EEE /* LaunchScreen.storyboard */; };
@@ -23,7 +23,7 @@
 		99D697B12888B0B500B25EEE /* ios-DollarCostAveragingCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-DollarCostAveragingCalculator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		99D697B42888B0B500B25EEE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		99D697B62888B0B500B25EEE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		99D697B82888B0B500B25EEE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		99D697B82888B0B500B25EEE /* SearchTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
 		99D697BB2888B0B500B25EEE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		99D697BD2888B0B700B25EEE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		99D697C02888B0B700B25EEE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -58,7 +58,6 @@
 				6D417E0A9C149B71A4620419 /* Pods-ios-DollarCostAveragingCalculator.debug.xcconfig */,
 				202787021FE6ED8CC9DED49C /* Pods-ios-DollarCostAveragingCalculator.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -86,7 +85,7 @@
 			children = (
 				99D697B42888B0B500B25EEE /* AppDelegate.swift */,
 				99D697B62888B0B500B25EEE /* SceneDelegate.swift */,
-				99D697B82888B0B500B25EEE /* ViewController.swift */,
+				99D697B82888B0B500B25EEE /* SearchTableViewController.swift */,
 				99D697BA2888B0B500B25EEE /* Main.storyboard */,
 				99D697BD2888B0B700B25EEE /* Assets.xcassets */,
 				99D697BF2888B0B700B25EEE /* LaunchScreen.storyboard */,
@@ -211,7 +210,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				99D697B92888B0B500B25EEE /* ViewController.swift in Sources */,
+				99D697B92888B0B500B25EEE /* SearchTableViewController.swift in Sources */,
 				99D697B52888B0B500B25EEE /* AppDelegate.swift in Sources */,
 				99D697B72888B0B500B25EEE /* SceneDelegate.swift in Sources */,
 			);
