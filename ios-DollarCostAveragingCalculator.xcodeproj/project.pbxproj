@@ -12,6 +12,8 @@
 		99846F47288EF2DA00B590FF /* SearchResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99846F46288EF2DA00B590FF /* SearchResults.swift */; };
 		99846F49288F3C7900B590FF /* SearchPlaceholderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99846F48288F3C7900B590FF /* SearchPlaceholderView.swift */; };
 		99846F4C28904AB800B590FF /* ViewLoadingAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99846F4B28904AB800B590FF /* ViewLoadingAnimation.swift */; };
+		99A43F222891ABAA00E7FCE4 /* TimeSeriesMonthlyAdjusted.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A43F212891ABAA00E7FCE4 /* TimeSeriesMonthlyAdjusted.swift */; };
+		99A43F252891C71600E7FCE4 /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A43F242891C71600E7FCE4 /* ApiError.swift */; };
 		99D697B52888B0B500B25EEE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D697B42888B0B500B25EEE /* AppDelegate.swift */; };
 		99D697B72888B0B500B25EEE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D697B62888B0B500B25EEE /* SceneDelegate.swift */; };
 		99D697B92888B0B500B25EEE /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D697B82888B0B500B25EEE /* SearchTableViewController.swift */; };
@@ -30,6 +32,8 @@
 		99846F46288EF2DA00B590FF /* SearchResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResults.swift; sourceTree = "<group>"; };
 		99846F48288F3C7900B590FF /* SearchPlaceholderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPlaceholderView.swift; sourceTree = "<group>"; };
 		99846F4B28904AB800B590FF /* ViewLoadingAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewLoadingAnimation.swift; sourceTree = "<group>"; };
+		99A43F212891ABAA00E7FCE4 /* TimeSeriesMonthlyAdjusted.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeSeriesMonthlyAdjusted.swift; sourceTree = "<group>"; };
+		99A43F242891C71600E7FCE4 /* ApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
 		99D697B12888B0B500B25EEE /* ios-DollarCostAveragingCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-DollarCostAveragingCalculator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		99D697B42888B0B500B25EEE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		99D697B62888B0B500B25EEE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -109,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				99846F46288EF2DA00B590FF /* SearchResults.swift */,
+				99A43F212891ABAA00E7FCE4 /* TimeSeriesMonthlyAdjusted.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -119,6 +124,14 @@
 				99846F4B28904AB800B590FF /* ViewLoadingAnimation.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		99A43F232891C6B100E7FCE4 /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				99A43F242891C71600E7FCE4 /* ApiError.swift */,
+			);
+			path = Error;
 			sourceTree = "<group>";
 		};
 		99D697A82888B0B500B25EEE = {
@@ -143,6 +156,7 @@
 		99D697B32888B0B500B25EEE /* ios-DollarCostAveragingCalculator */ = {
 			isa = PBXGroup;
 			children = (
+				99A43F232891C6B100E7FCE4 /* Error */,
 				99846F4A289049B400B590FF /* Protocols */,
 				99846F45288EF2C700B590FF /* Models */,
 				99846F44288EF0A900B590FF /* NetworkingService */,
@@ -276,8 +290,10 @@
 				99D697B92888B0B500B25EEE /* SearchTableViewController.swift in Sources */,
 				99846F43288EF0A500B590FF /* APIService.swift in Sources */,
 				99846F47288EF2DA00B590FF /* SearchResults.swift in Sources */,
+				99A43F252891C71600E7FCE4 /* ApiError.swift in Sources */,
 				99846F41288EEC0400B590FF /* SearchTableViewCell.swift in Sources */,
 				99D697B52888B0B500B25EEE /* AppDelegate.swift in Sources */,
+				99A43F222891ABAA00E7FCE4 /* TimeSeriesMonthlyAdjusted.swift in Sources */,
 				99D697B72888B0B500B25EEE /* SceneDelegate.swift in Sources */,
 				99846F4C28904AB800B590FF /* ViewLoadingAnimation.swift in Sources */,
 				99846F49288F3C7900B590FF /* SearchPlaceholderView.swift in Sources */,
