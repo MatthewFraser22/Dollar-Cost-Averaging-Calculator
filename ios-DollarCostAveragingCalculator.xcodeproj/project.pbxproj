@@ -7,9 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		99846F41288EEC0400B590FF /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99846F40288EEC0400B590FF /* SearchTableViewCell.swift */; };
+		99846F43288EF0A500B590FF /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99846F42288EF0A500B590FF /* APIService.swift */; };
+		99846F47288EF2DA00B590FF /* SearchResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99846F46288EF2DA00B590FF /* SearchResults.swift */; };
+		99846F49288F3C7900B590FF /* SearchPlaceholderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99846F48288F3C7900B590FF /* SearchPlaceholderView.swift */; };
+		99846F4C28904AB800B590FF /* ViewLoadingAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99846F4B28904AB800B590FF /* ViewLoadingAnimation.swift */; };
 		99D697B52888B0B500B25EEE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D697B42888B0B500B25EEE /* AppDelegate.swift */; };
 		99D697B72888B0B500B25EEE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D697B62888B0B500B25EEE /* SceneDelegate.swift */; };
-		99D697B92888B0B500B25EEE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D697B82888B0B500B25EEE /* ViewController.swift */; };
+		99D697B92888B0B500B25EEE /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D697B82888B0B500B25EEE /* SearchTableViewController.swift */; };
 		99D697BC2888B0B500B25EEE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99D697BA2888B0B500B25EEE /* Main.storyboard */; };
 		99D697BE2888B0B700B25EEE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99D697BD2888B0B700B25EEE /* Assets.xcassets */; };
 		99D697C12888B0B700B25EEE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99D697BF2888B0B700B25EEE /* LaunchScreen.storyboard */; };
@@ -20,10 +25,15 @@
 /* Begin PBXFileReference section */
 		202787021FE6ED8CC9DED49C /* Pods-ios-DollarCostAveragingCalculator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-DollarCostAveragingCalculator.release.xcconfig"; path = "Target Support Files/Pods-ios-DollarCostAveragingCalculator/Pods-ios-DollarCostAveragingCalculator.release.xcconfig"; sourceTree = "<group>"; };
 		6D417E0A9C149B71A4620419 /* Pods-ios-DollarCostAveragingCalculator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-DollarCostAveragingCalculator.debug.xcconfig"; path = "Target Support Files/Pods-ios-DollarCostAveragingCalculator/Pods-ios-DollarCostAveragingCalculator.debug.xcconfig"; sourceTree = "<group>"; };
+		99846F40288EEC0400B590FF /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
+		99846F42288EF0A500B590FF /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		99846F46288EF2DA00B590FF /* SearchResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResults.swift; sourceTree = "<group>"; };
+		99846F48288F3C7900B590FF /* SearchPlaceholderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPlaceholderView.swift; sourceTree = "<group>"; };
+		99846F4B28904AB800B590FF /* ViewLoadingAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewLoadingAnimation.swift; sourceTree = "<group>"; };
 		99D697B12888B0B500B25EEE /* ios-DollarCostAveragingCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-DollarCostAveragingCalculator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		99D697B42888B0B500B25EEE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		99D697B62888B0B500B25EEE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		99D697B82888B0B500B25EEE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		99D697B82888B0B500B25EEE /* SearchTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
 		99D697BB2888B0B500B25EEE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		99D697BD2888B0B700B25EEE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		99D697C02888B0B700B25EEE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -58,8 +68,57 @@
 				6D417E0A9C149B71A4620419 /* Pods-ios-DollarCostAveragingCalculator.debug.xcconfig */,
 				202787021FE6ED8CC9DED49C /* Pods-ios-DollarCostAveragingCalculator.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		99846F3D288EEB9900B590FF /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				99D697B82888B0B500B25EEE /* SearchTableViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		99846F3E288EEBA500B590FF /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				99D697B42888B0B500B25EEE /* AppDelegate.swift */,
+				99D697B62888B0B500B25EEE /* SceneDelegate.swift */,
+			);
+			path = Delegate;
+			sourceTree = "<group>";
+		};
+		99846F3F288EEBB700B590FF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				99846F40288EEC0400B590FF /* SearchTableViewCell.swift */,
+				99846F48288F3C7900B590FF /* SearchPlaceholderView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		99846F44288EF0A900B590FF /* NetworkingService */ = {
+			isa = PBXGroup;
+			children = (
+				99846F42288EF0A500B590FF /* APIService.swift */,
+			);
+			path = NetworkingService;
+			sourceTree = "<group>";
+		};
+		99846F45288EF2C700B590FF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				99846F46288EF2DA00B590FF /* SearchResults.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		99846F4A289049B400B590FF /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				99846F4B28904AB800B590FF /* ViewLoadingAnimation.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		99D697A82888B0B500B25EEE = {
@@ -84,12 +143,15 @@
 		99D697B32888B0B500B25EEE /* ios-DollarCostAveragingCalculator */ = {
 			isa = PBXGroup;
 			children = (
-				99D697B42888B0B500B25EEE /* AppDelegate.swift */,
-				99D697B62888B0B500B25EEE /* SceneDelegate.swift */,
-				99D697B82888B0B500B25EEE /* ViewController.swift */,
+				99846F4A289049B400B590FF /* Protocols */,
+				99846F45288EF2C700B590FF /* Models */,
+				99846F44288EF0A900B590FF /* NetworkingService */,
+				99846F3E288EEBA500B590FF /* Delegate */,
+				99846F3D288EEB9900B590FF /* Controllers */,
+				99846F3F288EEBB700B590FF /* Views */,
 				99D697BA2888B0B500B25EEE /* Main.storyboard */,
-				99D697BD2888B0B700B25EEE /* Assets.xcassets */,
 				99D697BF2888B0B700B25EEE /* LaunchScreen.storyboard */,
+				99D697BD2888B0B700B25EEE /* Assets.xcassets */,
 				99D697C22888B0B700B25EEE /* Info.plist */,
 			);
 			path = "ios-DollarCostAveragingCalculator";
@@ -211,9 +273,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				99D697B92888B0B500B25EEE /* ViewController.swift in Sources */,
+				99D697B92888B0B500B25EEE /* SearchTableViewController.swift in Sources */,
+				99846F43288EF0A500B590FF /* APIService.swift in Sources */,
+				99846F47288EF2DA00B590FF /* SearchResults.swift in Sources */,
+				99846F41288EEC0400B590FF /* SearchTableViewCell.swift in Sources */,
 				99D697B52888B0B500B25EEE /* AppDelegate.swift in Sources */,
 				99D697B72888B0B500B25EEE /* SceneDelegate.swift in Sources */,
+				99846F4C28904AB800B590FF /* ViewLoadingAnimation.swift in Sources */,
+				99846F49288F3C7900B590FF /* SearchPlaceholderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
