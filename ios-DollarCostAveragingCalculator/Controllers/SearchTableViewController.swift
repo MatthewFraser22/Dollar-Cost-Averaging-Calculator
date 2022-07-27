@@ -99,6 +99,10 @@ class SearchTableViewController: UITableViewController, ViewLoadingAnimation {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return searchResults?.results.count ?? 0
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "showCalculator", sender: nil)
+    }
 
     private enum Mode {
         case onBoarding

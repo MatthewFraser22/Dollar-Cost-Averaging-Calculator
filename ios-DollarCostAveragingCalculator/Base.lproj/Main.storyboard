@@ -113,7 +113,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="5rh-Wg-Xaa"/>
                     <connections>
-                        <segue destination="LMs-rf-JzI" kind="show" id="kuI-WW-N3L"/>
+                        <segue destination="LMs-rf-JzI" kind="show" identifier="showCalculator" id="kuI-WW-N3L"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yff-zF-1xf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -124,7 +124,7 @@
         <scene sceneID="tBe-uW-mss">
             <objects>
                 <tableViewController id="LMs-rf-JzI" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="NQj-TJ-OSE">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="NQj-TJ-OSE">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -189,7 +189,7 @@
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="1Az-d7-mO5" userLabel="Vertical Stack View">
                                                             <rect key="frame" x="0.0" y="68" width="382" height="14"/>
                                                             <subviews>
-                                                                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EBr-jc-yla">
+                                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="EBr-jc-yla">
                                                                     <rect key="frame" x="0.0" y="0.0" width="382" height="14"/>
                                                                     <subviews>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Inventment Amount" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QYU-BJ-i1G">
@@ -199,11 +199,17 @@
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JCa-yB-hGr" userLabel="Spacer View">
-                                                                            <rect key="frame" x="91" y="0.0" width="249.5" height="14"/>
+                                                                            <rect key="frame" x="95" y="0.0" width="239.5" height="14"/>
                                                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                                         </view>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="USD 100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dN1-24-GWL">
-                                                                            <rect key="frame" x="340.5" y="0.0" width="41.5" height="14"/>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="USD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dN1-24-GWL">
+                                                                            <rect key="frame" x="338.5" y="0.0" width="21" height="14"/>
+                                                                            <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="10"/>
+                                                                            <nil key="textColor"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DOC-fo-pe7">
+                                                                            <rect key="frame" x="363.5" y="0.0" width="18.5" height="14"/>
                                                                             <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="10"/>
                                                                             <nil key="textColor"/>
                                                                             <nil key="highlightedColor"/>
@@ -288,7 +294,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="hPi-EP-DpD" userLabel="Vertical Stack View">
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="hPi-EP-DpD" userLabel="Vertical Stack View">
                                                     <rect key="frame" x="16" y="8" width="382" height="184"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="-4" translatesAutoresizingMaskIntoConstraints="NO" id="SVo-Ha-6fS">
@@ -325,7 +331,7 @@
                                                             </subviews>
                                                         </stackView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="-4" translatesAutoresizingMaskIntoConstraints="NO" id="ffD-K0-JIo">
-                                                            <rect key="frame" x="0.0" y="46" width="382" height="46"/>
+                                                            <rect key="frame" x="0.0" y="54" width="382" height="46"/>
                                                             <subviews>
                                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Monthly dollar cost averaging amount" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lNH-24-oAj">
                                                                     <rect key="frame" x="0.0" y="0.0" width="382" height="36"/>
@@ -358,7 +364,7 @@
                                                             </subviews>
                                                         </stackView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="-4" translatesAutoresizingMaskIntoConstraints="NO" id="GPI-4B-sWZ">
-                                                            <rect key="frame" x="0.0" y="92" width="382" height="92"/>
+                                                            <rect key="frame" x="0.0" y="108" width="382" height="76"/>
                                                             <subviews>
                                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter the initial date of investment" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="t2z-I0-DZM">
                                                                     <rect key="frame" x="0.0" y="0.0" width="382" height="36"/>
@@ -389,7 +395,7 @@
                                                                     </subviews>
                                                                 </stackView>
                                                                 <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="3xt-ZK-XyG">
-                                                                    <rect key="frame" x="-2" y="42" width="386" height="51"/>
+                                                                    <rect key="frame" x="-2" y="42" width="386" height="35"/>
                                                                 </slider>
                                                             </subviews>
                                                         </stackView>
@@ -412,7 +418,7 @@
                             <outlet property="delegate" destination="LMs-rf-JzI" id="hea-HX-a9K"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="0b4-bS-Pna"/>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="0b4-bS-Pna"/>
                     <connections>
                         <segue destination="U2A-V9-ddD" kind="show" id="Blf-Mn-MF2"/>
                     </connections>
