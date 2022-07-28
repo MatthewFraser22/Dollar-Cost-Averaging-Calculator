@@ -120,10 +120,10 @@
             </objects>
             <point key="canvasLocation" x="547.82608695652175" y="286.60714285714283"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Calculator Table View Controller-->
         <scene sceneID="tBe-uW-mss">
             <objects>
-                <tableViewController id="LMs-rf-JzI" sceneMemberID="viewController">
+                <tableViewController id="LMs-rf-JzI" customClass="CalculatorTableViewController" customModule="ios_DollarCostAveragingCalculator" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="NQj-TJ-OSE">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -378,16 +378,10 @@
                                                                     <rect key="frame" x="0.0" y="32" width="382" height="14"/>
                                                                     <subviews>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Initial date of Inventment" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0St-5f-zCj">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="136" height="14"/>
+                                                                            <rect key="frame" x="0.0" y="0.0" width="382" height="14"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="height" constant="14" id="dTp-7O-Dpa"/>
                                                                             </constraints>
-                                                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="12"/>
-                                                                            <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                            <nil key="highlightedColor"/>
-                                                                        </label>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="(USD)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JSf-iM-Zsm">
-                                                                            <rect key="frame" x="140" y="0.0" width="242" height="14"/>
                                                                             <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="12"/>
                                                                             <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                             <nil key="highlightedColor"/>
@@ -420,6 +414,14 @@
                     </tableView>
                     <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="0b4-bS-Pna"/>
                     <connections>
+                        <outlet property="assetNameLabel" destination="eyP-HD-hp4" id="7uK-aL-qoL"/>
+                        <outlet property="initialInvestment" destination="ADh-TO-tuw" id="LOz-Y0-Nb3"/>
+                        <outlet property="investmentAmountCurrencyLabel" destination="dN1-24-GWL" id="6BE-4m-chJ"/>
+                        <outlet property="monthlyDollarCostAveragingAmount" destination="lNH-24-oAj" id="5Dl-kx-1Qf"/>
+                        <outlet property="symbolLabel" destination="9AB-6a-b3z" id="Hd5-1c-EXt"/>
+                        <outletCollection property="currencyLabels" destination="ngL-Xb-UMp" collectionClass="NSMutableArray" id="XUR-zL-djw"/>
+                        <outletCollection property="currencyLabels" destination="hv9-aa-BrJ" collectionClass="NSMutableArray" id="eN1-be-Z0u"/>
+                        <outletCollection property="currencyLabels" destination="mPY-nq-qbo" collectionClass="NSMutableArray" id="JRC-FW-E3F"/>
                         <segue destination="U2A-V9-ddD" kind="show" id="Blf-Mn-MF2"/>
                     </connections>
                 </tableViewController>
