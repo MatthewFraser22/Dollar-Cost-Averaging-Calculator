@@ -415,6 +415,7 @@
                     <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="0b4-bS-Pna"/>
                     <connections>
                         <outlet property="assetNameLabel" destination="eyP-HD-hp4" id="7uK-aL-qoL"/>
+                        <outlet property="initialDateOfInvestmentTextField" destination="t2z-I0-DZM" id="Sx8-wm-8pM"/>
                         <outlet property="initialInvestment" destination="ADh-TO-tuw" id="LOz-Y0-Nb3"/>
                         <outlet property="investmentAmountCurrencyLabel" destination="dN1-24-GWL" id="6BE-4m-chJ"/>
                         <outlet property="monthlyDollarCostAveragingAmount" destination="lNH-24-oAj" id="5Dl-kx-1Qf"/>
@@ -422,7 +423,7 @@
                         <outletCollection property="currencyLabels" destination="ngL-Xb-UMp" collectionClass="NSMutableArray" id="XUR-zL-djw"/>
                         <outletCollection property="currencyLabels" destination="hv9-aa-BrJ" collectionClass="NSMutableArray" id="eN1-be-Z0u"/>
                         <outletCollection property="currencyLabels" destination="mPY-nq-qbo" collectionClass="NSMutableArray" id="JRC-FW-E3F"/>
-                        <segue destination="U2A-V9-ddD" kind="show" id="Blf-Mn-MF2"/>
+                        <segue destination="U2A-V9-ddD" kind="show" identifier="showDateSelection" id="Blf-Mn-MF2"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="orp-Fa-tRQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
