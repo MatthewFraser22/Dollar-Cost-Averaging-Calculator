@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9953445528937C6C00FDDC1F /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9953445428937C6C00FDDC1F /* Date+Extensions.swift */; };
 		99846F41288EEC0400B590FF /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99846F40288EEC0400B590FF /* SearchTableViewCell.swift */; };
 		99846F43288EF0A500B590FF /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99846F42288EF0A500B590FF /* APIService.swift */; };
 		99846F47288EF2DA00B590FF /* SearchResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99846F46288EF2DA00B590FF /* SearchResults.swift */; };
@@ -18,6 +19,7 @@
 		99A43F29289236C400E7FCE4 /* Asset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A43F28289236C400E7FCE4 /* Asset.swift */; };
 		99A43F2C28923E7400E7FCE4 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A43F2B28923E7400E7FCE4 /* String+Extensions.swift */; };
 		99ABB5702893132700518C98 /* UITextField+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99ABB56F2893132700518C98 /* UITextField+Extensions.swift */; };
+		99ABB57228931CE100518C98 /* DateSelectionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99ABB57128931CE100518C98 /* DateSelectionTableViewController.swift */; };
 		99D697B52888B0B500B25EEE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D697B42888B0B500B25EEE /* AppDelegate.swift */; };
 		99D697B72888B0B500B25EEE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D697B62888B0B500B25EEE /* SceneDelegate.swift */; };
 		99D697B92888B0B500B25EEE /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D697B82888B0B500B25EEE /* SearchTableViewController.swift */; };
@@ -31,6 +33,7 @@
 /* Begin PBXFileReference section */
 		202787021FE6ED8CC9DED49C /* Pods-ios-DollarCostAveragingCalculator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-DollarCostAveragingCalculator.release.xcconfig"; path = "Target Support Files/Pods-ios-DollarCostAveragingCalculator/Pods-ios-DollarCostAveragingCalculator.release.xcconfig"; sourceTree = "<group>"; };
 		6D417E0A9C149B71A4620419 /* Pods-ios-DollarCostAveragingCalculator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-DollarCostAveragingCalculator.debug.xcconfig"; path = "Target Support Files/Pods-ios-DollarCostAveragingCalculator/Pods-ios-DollarCostAveragingCalculator.debug.xcconfig"; sourceTree = "<group>"; };
+		9953445428937C6C00FDDC1F /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
 		99846F40288EEC0400B590FF /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
 		99846F42288EF0A500B590FF /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		99846F46288EF2DA00B590FF /* SearchResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResults.swift; sourceTree = "<group>"; };
@@ -42,6 +45,7 @@
 		99A43F28289236C400E7FCE4 /* Asset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Asset.swift; sourceTree = "<group>"; };
 		99A43F2B28923E7400E7FCE4 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		99ABB56F2893132700518C98 /* UITextField+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extensions.swift"; sourceTree = "<group>"; };
+		99ABB57128931CE100518C98 /* DateSelectionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateSelectionTableViewController.swift; sourceTree = "<group>"; };
 		99D697B12888B0B500B25EEE /* ios-DollarCostAveragingCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-DollarCostAveragingCalculator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		99D697B42888B0B500B25EEE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		99D697B62888B0B500B25EEE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -88,6 +92,7 @@
 			children = (
 				99D697B82888B0B500B25EEE /* SearchTableViewController.swift */,
 				99A43F262892358C00E7FCE4 /* CalculatorTableViewController.swift */,
+				99ABB57128931CE100518C98 /* DateSelectionTableViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -149,6 +154,7 @@
 			children = (
 				99A43F2B28923E7400E7FCE4 /* String+Extensions.swift */,
 				99ABB56F2893132700518C98 /* UITextField+Extensions.swift */,
+				9953445428937C6C00FDDC1F /* Date+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -309,12 +315,14 @@
 			files = (
 				99A43F272892358C00E7FCE4 /* CalculatorTableViewController.swift in Sources */,
 				99ABB5702893132700518C98 /* UITextField+Extensions.swift in Sources */,
+				99ABB57228931CE100518C98 /* DateSelectionTableViewController.swift in Sources */,
 				99A43F2C28923E7400E7FCE4 /* String+Extensions.swift in Sources */,
 				99D697B92888B0B500B25EEE /* SearchTableViewController.swift in Sources */,
 				99846F43288EF0A500B590FF /* APIService.swift in Sources */,
 				99846F47288EF2DA00B590FF /* SearchResults.swift in Sources */,
 				99A43F252891C71600E7FCE4 /* ApiError.swift in Sources */,
 				99846F41288EEC0400B590FF /* SearchTableViewCell.swift in Sources */,
+				9953445528937C6C00FDDC1F /* Date+Extensions.swift in Sources */,
 				99A43F29289236C400E7FCE4 /* Asset.swift in Sources */,
 				99D697B52888B0B500B25EEE /* AppDelegate.swift in Sources */,
 				99A43F222891ABAA00E7FCE4 /* TimeSeriesMonthlyAdjusted.swift in Sources */,

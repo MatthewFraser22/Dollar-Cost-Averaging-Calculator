@@ -22,6 +22,8 @@ class CalculatorTableViewController: UITableViewController {
 
     var asset: Asset?
 
+    private var initialDateOfInvestmentIndex: Int?
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -49,12 +51,39 @@ class CalculatorTableViewController: UITableViewController {
         monthlyDollarCostAveragingAmount.addDoneButton()
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showDateSelection",
+           let dateSelectionTableViewController = segue.destination as? DateSelectionTableViewController,
+           let timeSeriesMonthlyAdjusted = sender as? TimeSeriesMonthlyAdjusted {
+            dateSelectionTableViewController.timeSeriesMonthlyAdjusted = timeSeriesMonthlyAdjusted
+            dateSelectionTableViewController.selectedIndex = initialDateOfInvestmentIndex
+            dateSelectionTableViewController.didSelectDate = { [weak self] index in
+                self?.handleDateSelection(index: index)
+            }
+
+        }
+    }
+
+    private func handleDateSelection(index: Int) {
+        guard navigationController?.visibleViewController is DateSelectionTableViewController else { return }
+
+        navigationController?.popViewController(animated: true)
+        if let monthInfos = asset?.timeSeriesMontlyAdjusted.getMonthInfos() {
+            initialDateOfInvestmentIndex = index
+            let monthInfo = monthInfos[index]
+            let dateString = monthInfo.date.MMYYFormat
+            initialDateOfInvestmentTextField.text = dateString
+        }
+    }
 }
 
 extension CalculatorTableViewController: UITextFieldDelegate {
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
         if textField == initialDateOfInvestmentTextField {
-            performSegue(withIdentifier: "showDateSelection", sender: asset?.timeSeriesMontlyAdjusted)
+            performSegue(
+                withIdentifier: "showDateSelection",
+                sender: asset?.timeSeriesMontlyAdjusted
+            )
             return false
         }
 
