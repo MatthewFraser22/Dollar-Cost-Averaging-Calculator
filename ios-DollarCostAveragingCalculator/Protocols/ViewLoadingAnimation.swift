@@ -18,6 +18,9 @@ protocol ViewLoadingAnimation where Self: UIViewController {
 
 extension ViewLoadingAnimation {
     func showLoadingAnimation() {
+
+        guard view.subviews.filter({ $0 is MBProgressHUD}).isEmpty == false else { return }
+
         DispatchQueue.main.async {
             MBProgressHUD.showAdded(to: self.view, animated: true)
         }

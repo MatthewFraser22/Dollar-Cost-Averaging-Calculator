@@ -129,6 +129,7 @@ class SearchTableViewController: UITableViewController, ViewLoadingAnimation {
                 )
 
                 self?.performSegue(withIdentifier: "showCalculator", sender: asset)
+                self?.searchController.searchBar.text = nil
             }.store(in: &cancellables)
     }
     

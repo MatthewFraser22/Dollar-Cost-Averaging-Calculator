@@ -44,9 +44,16 @@ class CalculatorTableViewController: UITableViewController {
         setupTextViews()
         setupDateSlider()
         observeFourm()
+        resetViews()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        initialInvestment.becomeFirstResponder()
     }
 
     private func setupViews() {
+        navigationItem.title = asset?.searchResult.symbol
         symbolLabel.text = asset?.searchResult.symbol
         assetNameLabel.text = asset?.searchResult.name
         investmentAmountCurrencyLabel.text = asset?.searchResult.currency
@@ -105,25 +112,29 @@ class CalculatorTableViewController: UITableViewController {
         Publishers.CombineLatest3($initialInvestmentAmount, $monthlyDollarCostAveraging, $initialDateOfInvestmentIndex)
             .sink { [weak self] (initialInvestmentAmount, monthlyDollarCostAveraging, initialDateOfInvestmentIndex) in
 
-                print("Testing printing label \(initialInvestmentAmount), \(monthlyDollarCostAveraging), \(initialDateOfInvestmentIndex)")
                 // Make sure all the fields are not nil before the calculation begins
                 guard let initialInvestmentAmount = initialInvestmentAmount,
                       let monthlyDollarCostAveraging = monthlyDollarCostAveraging,
-                      let initialDateOfInvestmentIndex = initialDateOfInvestmentIndex else {
+                      let initialDateOfInvestmentIndex = initialDateOfInvestmentIndex,
+                      let asset = self?.asset else {
                     return
                 }
 
                 let result = self?.dcaService.calculate(
-                    initialInvestmentAmount: initialInvestmentAmount.doubleValue,
+                    asset: asset, initialInvestmentAmount: initialInvestmentAmount.doubleValue,
                     monthlyDollarcostAveragingAmount: monthlyDollarCostAveraging.doubleValue,
                     initialDateOfInvestmentIndex: initialDateOfInvestmentIndex)
 
-                print("Testing printing label")
-                self?.currentValueLabel.text = result?.currentValue.toString
-                self?.investmentAmountLabel.text = result?.investmentAmount.toString
-                self?.gainLabel.text = result?.gain.toString
-                self?.yeildLabel.text = result?.yeid.toString
-                self?.annualReturnLabel.text = result?.annualReturn.toString
+                let isProfitable = (result?.isProfitable == true)
+                let gainSymbol = isProfitable ? "+" : ""
+                self?.currentValueLabel.backgroundColor = (result?.isProfitable == true) ? .themeGreenShade : .themeRedShade
+                self?.currentValueLabel.text = result?.currentValue.currencyFormat
+                self?.investmentAmountLabel.text = result?.investmentAmount.toCurrencyFormat(hasDollarSymbol: true, hasDecimalPlaces: false)
+                self?.gainLabel.text = result?.gain.toCurrencyFormat(hasDollarSymbol: false, hasDecimalPlaces: false).prefix(withText: gainSymbol)
+                self?.yeildLabel.textColor = (isProfitable) ? .systemGreen : .systemRed
+                self?.yeildLabel.text = result?.yeid.percentageFormat.prefix(withText: gainSymbol).addBrackets()
+                self?.annualReturnLabel.textColor = (isProfitable) ? .systemGreen : .systemRed
+                self?.annualReturnLabel.text = result?.annualReturn.percentageFormat
         }.store(in: &subscribers)
     }
 
@@ -150,6 +161,14 @@ class CalculatorTableViewController: UITableViewController {
             let dateString = monthInfo.date.MMYYFormat
             initialDateOfInvestmentTextField.text = dateString
         }
+    }
+    
+    private func resetViews() {
+        currentValueLabel.text = "0.00"
+        investmentAmountLabel.text = "0.00"
+        gainLabel.text = "-"
+        yeildLabel.text = "-"
+        annualReturnLabel.text = "-"
     }
 
     // MARK: IBAction

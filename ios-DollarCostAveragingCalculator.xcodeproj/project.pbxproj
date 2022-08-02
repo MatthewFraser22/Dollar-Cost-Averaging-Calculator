@@ -16,6 +16,7 @@
 		99846F4C28904AB800B590FF /* ViewLoadingAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99846F4B28904AB800B590FF /* ViewLoadingAnimation.swift */; };
 		99998F192899733A0041F1D1 /* DCAService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99998F182899733A0041F1D1 /* DCAService.swift */; };
 		99998F1B28997BED0041F1D1 /* Double+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99998F1A28997BED0041F1D1 /* Double+Extensions.swift */; };
+		99998F1D28998B570041F1D1 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99998F1C28998B570041F1D1 /* UIColor+Extensions.swift */; };
 		99A43F222891ABAA00E7FCE4 /* TimeSeriesMonthlyAdjusted.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A43F212891ABAA00E7FCE4 /* TimeSeriesMonthlyAdjusted.swift */; };
 		99A43F252891C71600E7FCE4 /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A43F242891C71600E7FCE4 /* ApiError.swift */; };
 		99A43F272892358C00E7FCE4 /* CalculatorTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A43F262892358C00E7FCE4 /* CalculatorTableViewController.swift */; };
@@ -45,6 +46,7 @@
 		99846F4B28904AB800B590FF /* ViewLoadingAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewLoadingAnimation.swift; sourceTree = "<group>"; };
 		99998F182899733A0041F1D1 /* DCAService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DCAService.swift; sourceTree = "<group>"; };
 		99998F1A28997BED0041F1D1 /* Double+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extensions.swift"; sourceTree = "<group>"; };
+		99998F1C28998B570041F1D1 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		99A43F212891ABAA00E7FCE4 /* TimeSeriesMonthlyAdjusted.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeSeriesMonthlyAdjusted.swift; sourceTree = "<group>"; };
 		99A43F242891C71600E7FCE4 /* ApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
 		99A43F262892358C00E7FCE4 /* CalculatorTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorTableViewController.swift; sourceTree = "<group>"; };
@@ -164,6 +166,7 @@
 				9953445428937C6C00FDDC1F /* Date+Extensions.swift */,
 				9974D1922894B58F00B9474B /* Int+Extensions.swift */,
 				99998F1A28997BED0041F1D1 /* Double+Extensions.swift */,
+				99998F1C28998B570041F1D1 /* UIColor+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -333,6 +336,7 @@
 				99A43F252891C71600E7FCE4 /* ApiError.swift in Sources */,
 				99846F41288EEC0400B590FF /* SearchTableViewCell.swift in Sources */,
 				9953445528937C6C00FDDC1F /* Date+Extensions.swift in Sources */,
+				99998F1D28998B570041F1D1 /* UIColor+Extensions.swift in Sources */,
 				99A43F29289236C400E7FCE4 /* Asset.swift in Sources */,
 				99998F192899733A0041F1D1 /* DCAService.swift in Sources */,
 				99998F1B28997BED0041F1D1 /* Double+Extensions.swift in Sources */,
