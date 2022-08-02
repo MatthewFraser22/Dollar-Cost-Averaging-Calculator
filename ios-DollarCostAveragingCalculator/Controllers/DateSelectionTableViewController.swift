@@ -9,8 +9,8 @@ import Foundation
 import UIKit
 
 class DateSelectionTableViewController: UITableViewController {
-    var timeSeriesMonthlyAdjusted: TimeSeriesMonthlyAdjusted?
     private var monthInfos: [MonthInfo] = []
+    var timeSeriesMonthlyAdjusted: TimeSeriesMonthlyAdjusted?
     var selectedIndex: Int?
     var didSelectDate: ((Int) -> Void)?
 
@@ -41,10 +41,9 @@ extension DateSelectionTableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let monthInfo = monthInfos[indexPath.item]
-
         let cell = tableView.dequeueReusableCell(withIdentifier: "cellId", for: indexPath) as! DateSelectionTableViewCell
-
         let isSelected = indexPath.item == selectedIndex
+
         cell.configure(with: monthInfo, index: indexPath.item, isSelected: isSelected)
 
         return cell
@@ -63,6 +62,7 @@ class DateSelectionTableViewCell: UITableViewCell {
     func configure(with monthInfo: MonthInfo, index: Int, isSelected: Bool) {
         monthLabel.text = monthInfo.date.MMYYFormat
         accessoryType = isSelected ? .checkmark : .none
+
         if index == 1 {
             monthsAgoLabel.text = "1 month ago"
         } else if index > 1 {
