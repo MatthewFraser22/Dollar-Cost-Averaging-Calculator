@@ -101,7 +101,44 @@ class SearchTableViewController: UITableViewController, ViewLoadingAnimation {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "showCalculator", sender: nil)
+        tableView.deselectRow(at: indexPath, animated: true)
+
+        guard let searchResults = searchResults else { return }
+
+        let searchresult = searchResults.results[indexPath.item]
+        let symbol = searchresult.symbol
+        handleSelection(for: symbol, searchResult: searchresult)
+    }
+    
+    private func handleSelection(for symbol: String, searchResult: SearchResult) {
+        showLoadingAnimation()
+        apiService.fetchTimeSeriesMonthlyAdjustedPublisher(keywords: symbol)
+            .sink { [weak self] completion in
+                self?.hideLoadingAnimation()
+                switch completion {
+                case .finished:
+                    break
+                case let .failure(error):
+                    print(error)
+                }
+            } receiveValue: { [weak self] timeSeriesMonthlyAdjusted in
+                self?.hideLoadingAnimation()
+                let asset = Asset(
+                    searchResult: searchResult,
+                    timeSeriesMontlyAdjusted: timeSeriesMonthlyAdjusted
+                )
+
+                self?.performSegue(withIdentifier: "showCalculator", sender: asset)
+                self?.searchController.searchBar.text = nil
+            }.store(in: &cancellables)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showCalculator",
+           let destination = segue.destination as? CalculatorTableViewController,
+           let asset = sender as? Asset {
+            destination.asset = asset
+        }
     }
 
     private enum Mode {
