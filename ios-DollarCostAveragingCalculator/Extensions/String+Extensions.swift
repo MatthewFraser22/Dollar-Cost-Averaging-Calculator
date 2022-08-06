@@ -15,4 +15,8 @@ extension String {
     func prefix(withText text: String) -> String {
         return text + self
     }
+
+    var toDouble: Double? {
+        return Double(self)
+    }
 }
