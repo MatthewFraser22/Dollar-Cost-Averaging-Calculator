@@ -60,7 +60,6 @@ class SearchTableViewController: UITableViewController, ViewLoadingAnimation {
                             print("Error: \(error)")
                         }
                     } receiveValue: { results in
-                        print("Testing here ")
                         self.searchResults = results
                         self.tableView.reloadData()
                     }.store(in: &self.cancellables)
