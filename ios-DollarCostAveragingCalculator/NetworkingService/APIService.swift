@@ -59,10 +59,6 @@ struct APIService {
             return Fail(error: error).eraseToAnyPublisher()
         }
 
-//        guard let keywords = keywords.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) else {
-//            return Fail(error: ApiError.encodingError).eraseToAnyPublisher()
-//        }
-
         let urlString = "https://www.alphavantage.co/query?function=TIME_SERIES_MONTHLY_ADJUSTED&symbol=\(symbol)&apikey=\(api_key)"
 
         let urlResult = parseURL(urlString: urlString)
@@ -94,32 +90,3 @@ struct APIService {
         return .success(url)
     }
 }
-
-/*
- func fetchSymbolsPublisher(keyWords: String) -> AnyPublisher<SearchResults, Error> {
-     let result = parseQuery(text: keyWords)
-
-     var symbol = String()
-
-     switch result {
-     case .success(let query):
-         symbol = query
-     case let .failure(error):
-         return Fail(error: error).eraseToAnyPublisher()
-     }
-
-     let urlString = "https://www.alphavantage.co/query?function=SYMBOL_SEARCH&keywords=\(symbol)&apikey=\(api_key)"
-
-     let url = URL(string: urlString)
-
-     guard let url = url else {
-         return Fail(error: ApiError.invalidURL).eraseToAnyPublisher()
-     }
-
-     return URLSession.shared.dataTaskPublisher(for: url)
-         .map { $0.data }
-         .decode(type: SearchResults.self, decoder: JSONDecoder())
-         .receive(on: RunLoop.main)
-         .eraseToAnyPublisher()
- }
- */
