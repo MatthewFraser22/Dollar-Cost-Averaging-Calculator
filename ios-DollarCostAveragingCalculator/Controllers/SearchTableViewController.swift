@@ -131,7 +131,7 @@ class SearchTableViewController: UITableViewController, ViewLoadingAnimation {
                 self?.searchController.searchBar.text = nil
             }.store(in: &cancellables)
     }
-    
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showCalculator",
            let destination = segue.destination as? CalculatorTableViewController,
